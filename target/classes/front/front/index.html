@@ -32,11 +32,7 @@
         <div class="list">
             <ul>
                 <li class='current'><a href="javascript:navPage('./pages/home/home.html')" class="menumain"><i class="layui-icon layui-icon-home"></i>首页</a></li>
-                <li v-for="(item, index) in indexNav.slice(1, 2)" v-bind:key="index">
-                    <a :href="'javascript:navPage(\'' + item.url + '\')'" class="menumain" style="cursor: pointer;">
-                        <i class="layui-icon" :class="iconArr[index]"></i>{{ item.name }}
-                    </a>
-                </li>
+                <li v-for="(item,index) in indexNav" v-bind:key="index"><a :href="'javascript:navPage(\''+item.url+'\')'" class="menumain" style="cursor: pointer;"><i class="layui-icon" :class="iconArr[index]"></i>{{item.name}}</a></li>
                 <li><a href="javascript:centerPage();" class="menumain"><i class="layui-icon layui-icon-username"></i>个人中心</a></li>
                 <li><a :href="adminurl" target="_blank" class="menumain" style="cursor: pointer;"><i class="layui-icon layui-icon-link"></i>后台管理</a></li>
                 <li><a href="javascript:navPage('./pages/cart/list.html')" class="menumain"><i class="layui-icon">&#xe657;</i>购物车</a></li>
