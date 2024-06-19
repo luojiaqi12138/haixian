@@ -376,16 +376,6 @@
 </style>
 <body>
 <div id="app">
-    <div class="banner">
-        <div class="layui-carousel" id="swiper"
-             :style='{"boxShadow":"0 0 0px rgba(255,0,0,.8)","margin":"0 auto","borderColor":"rgba(0,0,0,.3)","borderRadius":"0px","borderWidth":"0","width":"100%","borderStyle":"solid"}'>
-            <div carousel-item>
-                <div v-for="(item,index) in swiperList" :key="index">
-                    <img style="width: 100%;height: 100%;object-fit:cover;" :src="item.img"/>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div style="height: 100px;width: 1200px;margin: 0 auto;">
         <h1 style="font-size: 30px;margin-top: 35px;float: left;width: 150px"><i style="font-size: 30px;" class="layui-icon">&#xe657;</i>购物车 </h1>
@@ -581,36 +571,7 @@
 
         // var id = http.getParam('id');
 
-        // 获取轮播图 数据
-        http.request('config/list', 'get', {
-            page: 1,
-            limit: 5
-        }, function (res) {
-            if (res.data.list.length > 0) {
-                let swiperList = [];
-                res.data.list.forEach(element => {
-                    if(element.value != null){
-                        swiperList.push({
-                            img: element.value
-                        });
-                    }
-                });
-                vue.swiperList = swiperList;
 
-                vue.$nextTick(() => {
-                    carousel.render({
-                        elem: '#swiper',
-                        width: '100%',
-                        height: '450px',
-                        arrow: 'hover',
-                        anim: 'default',
-                        autoplay: 'true',
-                        interval: '3000',
-                        indicator: 'inside'
-                    });
-                });
-            }
-        });
 
 
 
