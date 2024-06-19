@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-"svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
+    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -14,7 +14,7 @@
     "echarts": "^4.6.0",
     "element-ui": "^2.13.0",
     "js-md5": "^0.7.3",
-	"vue-qr": "^3.2.2",
+    "vue-qr": "^3.2.2",
     "print-js": "^1.5.0",
     "vue": "^2.6.10",
     "vue-quill-editor": "^3.0.6",
