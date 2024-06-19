@@ -4,58 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeb71fce-7b5b-4024-9ed5-35678ab684a4" name="更改" comment="修改后台">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="eeb71fce-7b5b-4024-9ed5-35678ab684a4" name="更改" comment="基本完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/MyMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/CommonController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/ConfigController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/DictionaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/ForumController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HaixianCommentbackController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HaixianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/HaixianController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HaixianOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/HaixianOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NewsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/YonghuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/YonghuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/CommonDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/ConfigDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/ConfigDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/ForumDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/HaixianCommentbackDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/NewsDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/ConfigEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/ConfigEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/HaixianCommentbackEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/NewsEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/model/ForumModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/model/HaixianCommentbackModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/model/NewsModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/CartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/view/CartView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/DictionaryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/view/DictionaryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/ForumView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/HaixianCommentbackView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/NewsView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/vo/ForumVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/vo/HaixianCommentbackVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/vo/NewsVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/CommonService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/ConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/ConfigService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/ForumService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/HaixianCommentbackService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/NewsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/CommonServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/ForumServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/HaixianCommentbackServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/NewsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/front/modules/http/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/front/modules/http/http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommonDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ConfigDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DictionaryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DictionaryDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ForumDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HaixianCommentbackDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NewsDao.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/admin/admin/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/config/MyMetaObjectHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/config/MyMetaObjectHandler.class" afterDir="false" />
@@ -227,7 +177,7 @@
       <workItem from="1718783846531" duration="4673000" />
       <workItem from="1718789103338" duration="5370000" />
       <workItem from="1718799069606" duration="6486000" />
-      <workItem from="1718806562663" duration="303000" />
+      <workItem from="1718806562663" duration="1344000" />
     </task>
     <task id="LOCAL-00001" summary="项目开始">
       <created>1718730317459</created>
@@ -285,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718790624348</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="基本完成">
+      <created>1718807234672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718807234672</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +277,7 @@
     <MESSAGE value="商品模块更新" />
     <MESSAGE value="除杂" />
     <MESSAGE value="修改后台" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改后台" />
+    <MESSAGE value="基本完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本完成" />
   </component>
 </project>
