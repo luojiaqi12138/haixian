@@ -9,7 +9,7 @@ const base = {
     },
     getProjectName(){
         return {
-            projectName: "网络海鲜市场系统"
+            projectName: "海鲜市场管理系统"
         } 
     }
 }

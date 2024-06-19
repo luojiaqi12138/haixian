@@ -1,28 +1,4 @@
-var projectName = '网络海鲜市场系统';
-/**
- * 轮播图配置
- */
-var swiper = {
-	// 设定轮播容器宽度，支持像素和百分比
-	width: '100%',
-	height: '400px',
-	// hover（悬停显示）
-	// always（始终显示）
-	// none（始终不显示）
-	arrow: 'none',
-	// default（左右切换）
-	// updown（上下切换）
-	// fade（渐隐渐显切换）
-	anim: 'default',
-	// 自动切换的时间间隔
-	// 默认3000
-	interval: 2000,
-	// 指示器位置
-	// inside（容器内部）
-	// outside（容器外部）
-	// none（不显示）
-	indicator: 'outside'
-}
+var projectName = '海鲜市场管理系统';
 
 /**
  * 个人中心菜单

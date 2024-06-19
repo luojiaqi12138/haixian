@@ -3,7 +3,7 @@
         <div class="container loginIn" style="backgroundImage: url(/wangluohaixianshicang/img/back-img-bg.jpg)">
             <div :class="2 == 1 ? 'left' : 2 == 2 ? 'left center' : 'left right'" style="backgroundColor: rgba(208, 163, 140, 0.53)">
                 <el-form class="login-form" label-position="left" :label-width="1 == 3 ? '56px' : '0px'">
-                    <div class="title-container"><h3 class="title" style="color: rgba(255, 255, 255, 1)">网络海鲜市场系统</h3></div>
+                    <div class="title-container"><h3 class="title" style="color: rgba(255, 255, 255, 1)">海鲜市场管理系统</h3></div>
                     <el-form-item :label="1 == 3 ? '用户名' : ''" :class="'style'+1">
                         <span v-if="1 != 3" class="svg-container" style="color:rgba(238, 238, 238, 1);line-height:44px"><svg-icon icon-class="user" /></span>
                         <el-input placeholder="请输入用户名" name="username" type="text" v-model="rulesForm.username" />
