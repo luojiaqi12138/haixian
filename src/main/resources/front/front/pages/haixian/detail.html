@@ -373,16 +373,7 @@
                                 </li>
                             </ul>
 
-                            <ul class="post-meta">
-                                <li>
-                                    <!-- 视频 -->
-                                    <video :style='{"margin":"20px auto","borderRadius":"00px","display":"block"}'
-                                           style="width: 730px;" :src="detail.haixianVideo"
-                                           controls="controls">
-                                        您的浏览器不支持视频播放
-                                    </video>
-                                </li>
-                            </ul>
+
 
                             <div style="padding: 20px;border: 1px solid #f2f2f2;margin-top: 20px;display: flex">
                                 <div class="num-picker">
@@ -425,51 +416,10 @@
                         <div class="blog-details-content" v-html="myFilters(detail.haixianContent)">
                         </div>
                     </div>
-                    <div class="comments-area" v-if="haixianCommentbackDataList.length > 0">
-                        <h3 class="title">
-                            评论
-                        </h3>
-                        <ul class="comments-list">
-                            <li class="single-comment" v-for="(item,index) in haixianCommentbackDataList"
-                                v-bind:key="index">
-                                <div class="thumb">
-                                    <img :src="item.yonghuPhoto" alt="image">
-                                </div>
-                                <div class="content">
-                                    <h6 class="name">{{item.yonghuName}}
-                                        <span class="date" style="float:right">{{item.insertTime}}</span>
-                                    </h6>
-                                    <p>{{item.haixianCommentbackText}}</p>
-                                </div>
-                                <p v-if="item.replyText != null && item.replyText != ''"
-                                   style="font-size: 10px;color: #959797">
-                                    回复：{{ item.replyText }}</p>
-                            </li>
-                        </ul>
-                    </div>
+
 
                 </div>
-                <div class="col-lg-4" v-if="haixianRecommendList">
-                    <div class="sidebar">
-                        <div class="widget">
-                            <h3 class="widget-title">系统推荐</h3>
-                            <ul class="small-post-list">
-                                <li class="small-post-single" v-for="(item,index) in haixianRecommendList"
-                                    v-bind:key="index"
-                                    @click="jump('../haixian/detail.html?id='+item.id)">
-                                    <div class="thumb"><img width="65px" :src="item.haixianPhoto"
-                                                            alt="image">
-                                    </div>
-                                    <div class="content">
-                                        <a class="main_color" class="date">{{item.haixianName}}</a>
-                                        <h6 v-if="item.haixianNewMoney" class="post-title"><a
-                                                style="color: red">{{item.haixianNewMoney}}</a>RMB</h6>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>    </div>
