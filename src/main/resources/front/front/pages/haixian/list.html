@@ -31,31 +31,6 @@
         background-position: center;
     }
 
-    /*轮播图相关 start*/
-    #swiper {
-        overflow: hidden;
-    }
-
-    #swiper .layui-carousel-ind li {
-        width: 20px;
-        height: 10px;
-        border-width: 0;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, .3);
-        border-radius: 6px;
-        background-color: #f7f7f7;
-        box-shadow: 0 0 6px rgba(255, 0, 0, .8);
-    }
-
-    #swiper .layui-carousel-ind li.layui-this {
-        width: 30px;
-        height: 10px;
-        border-width: 0;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, .3);
-        border-radius: 6px;
-    }
-    /*轮播图相关 end*/
 
     /*列表*/
     .recommend {
@@ -264,17 +239,6 @@
 </style>
 <body>
 <div id="app">
-    <div class="banner">
-        <div class="layui-carousel" id="swiper"
-             :style='{"boxShadow":"0 0 0px rgba(255,0,0,.8)","margin":"0 auto","borderColor":"rgba(0,0,0,.3)","borderRadius":"0px","borderWidth":"0","width":"100%","borderStyle":"solid"}'>
-            <div carousel-item>
-                <div v-for="(item,index) in swiperList" :key="index">
-                    <img style="width: 100%;height: 100%;object-fit:cover;" :src="item.img"/>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="recommend index-pv1"
          :style='{"padding":"10px 0 10px 0","boxShadow":"0 0 0px ","margin":"10px 0 0 0","borderColor":"rgba(0,0,0,.3)","backgroundColor":"rgba(255, 0, 0, 0)","borderRadius":"0","borderWidth":"0","borderStyle":"solid"}'>
         <div class="box" style='width:80%'>

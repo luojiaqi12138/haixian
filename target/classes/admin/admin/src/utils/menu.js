@@ -54,6 +54,22 @@ const menu = {
                             "查看",
                             "新增",
                             "修改",
+                            "删除"
+                        ],
+                        "menu":"论坛管理",
+                        "menuJump":"列表",
+                        "tableName":"forum"
+                    }
+                ],
+                "menu":"论坛管理"
+            }
+            ,{
+                "child":[
+                    {
+                        "buttons":[
+                            "查看",
+                            "新增",
+                            "修改",
                             "报表",
                             "导入导出",
                             "删除"
@@ -148,7 +164,22 @@ const menu = {
     },
 	{
 	    "backMenu":[
-            {
+	        {
+	            "child":[
+	                {
+	                    "buttons":[
+	                        "查看",
+	                        "新增",
+	                        "删除"
+	                    ],
+	                    "menu":"论坛管理",
+	                    "menuJump":"列表",
+	                    "tableName":"forum"
+	                }
+	            ],
+	            "menu":"论坛管理"
+	        }
+	        ,{
 	            "child":[
 	                {
 	                    "buttons":[
@@ -180,6 +211,19 @@ const menu = {
 	                }
 	            ],
 	            "menu":"商品管理"
+	        }
+	        ,{
+	            "child":[
+	                {
+	                    "buttons":[
+	                        "查看"
+	                    ],
+	                    "menu":"商品资讯管理",
+	                    "menuJump":"列表",
+	                    "tableName":"news"
+	                }
+	            ],
+	            "menu":"商品资讯管理"
 	        }
 	    ],
 	    "frontMenu":[],

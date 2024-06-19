@@ -11,6 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="haixianshicang" target="1.8" />
+      <module name="wangluohaixianshicang" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

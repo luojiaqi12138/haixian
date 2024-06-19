@@ -17,6 +17,7 @@ public class wangluohaixianshicangApplication extends SpringBootServletInitializ
 	}
 	
 	@Override
+
     protected SpringApplicationBuilder configure(SpringApplicationBuilder applicationBuilder) {
         return applicationBuilder.sources(wangluohaixianshicangApplication.class);
     }
