@@ -36,26 +36,4 @@ public class DictionaryView extends DictionaryEntity implements Serializable {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

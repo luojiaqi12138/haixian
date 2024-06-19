@@ -201,10 +201,13 @@ public class HaixianController {
         return R.ok();
     }
 
+/*
 
-    /**
+    */
+/**
      * 批量上传
-     */
+     *//*
+
     @RequestMapping("/batchInsert")
     public R save( String fileName, HttpServletRequest request){
         logger.debug("batchInsert方法:,,Controller:{},,fileName:{}",this.getClass().getName(),fileName);
@@ -261,6 +264,7 @@ public class HaixianController {
         }
     }
 
+*/
 
 
 

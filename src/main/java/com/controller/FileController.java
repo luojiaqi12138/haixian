@@ -75,36 +75,6 @@ public class FileController{
 		}
 		return R.ok().put("file", fileName);
 	}
-	
-	/**
-	 * 下载文件
-	 */
-	@IgnoreAuth
-	@RequestMapping("/download")
-	public ResponseEntity<byte[]> download(@RequestParam String fileName) {
-		try {
-			File path = new File(ResourceUtils.getURL("classpath:static").getPath());
-			if(!path.exists()) {
-			    path = new File("");
-			}
-			File upload = new File(path.getAbsolutePath(),"/upload/");
-			if(!upload.exists()) {
-			    upload.mkdirs();
-			}
-			File file = new File(upload.getAbsolutePath()+"/"+fileName);
-			if(file.exists()){
-				/*if(!fileService.canRead(file, SessionManager.getSessionUser())){
-					getResponse().sendError(403);
-				}*/
-				HttpHeaders headers = new HttpHeaders();
-			    headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);    
-			    headers.setContentDispositionFormData("attachment", fileName);    
-			    return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file),headers, HttpStatus.CREATED);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return new ResponseEntity<byte[]>(HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+
 	
 }

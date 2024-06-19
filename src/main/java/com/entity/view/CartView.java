@@ -109,7 +109,6 @@ public class CartView extends CartEntity implements Serializable {
 		try {
 			BeanUtils.copyProperties(this, cartEntity);
 		} catch (IllegalAccessException | InvocationTargetException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

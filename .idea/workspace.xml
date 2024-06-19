@@ -4,91 +4,114 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeb71fce-7b5b-4024-9ed5-35678ab684a4" name="更改" comment="除杂">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baidu_aip_java_sdk_4_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatisplus_spring_boot_starter_1_0_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_excelant_3_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_29.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_18_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_6_19_9_34____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_6_19_9_34____.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_6_19_9_39____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_6_19_9_39____.xml" afterDir="false" />
+    <list default="true" id="eeb71fce-7b5b-4024-9ed5-35678ab684a4" name="更改" comment="修改后台">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/css/app.0e416637.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/css/app.fddc3027.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/css/chunk-vendors.a72b0961.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/fonts/element-icons.535877f5.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/fonts/element-icons.732389de.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/img/404.3648f234.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/img/gongshang.9ce31135.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/img/minsheng.50e3b425.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/img/zhongguo.20798bfa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/js/app.57ce3b58.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/js/app.57ce3b58.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/js/app.8957f739.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/js/app.8957f739.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/js/chunk-vendors.40773466.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/js/chunk-vendors.40773466.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/js/chunk-vendors.513e0860.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/dist/js/chunk-vendors.513e0860.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/admin/admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/admin/admin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/src/assets/css/element-variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/admin/admin/src/assets/css/element-variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/admin/admin/src/utils/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/admin/admin/src/utils/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/CommonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/ConfigController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/DictionaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/ForumController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HaixianCommentbackController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HaixianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/HaixianController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HaixianOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/HaixianOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NewsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/YonghuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/YonghuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/CommonDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/ConfigDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/ConfigDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/ForumDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/HaixianCommentbackDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/NewsDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/ConfigEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/ConfigEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/HaixianCommentbackEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/NewsEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/model/ForumModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/model/HaixianCommentbackModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/model/NewsModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/CartView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/view/CartView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/DictionaryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/view/DictionaryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/ForumView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/HaixianCommentbackView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/view/NewsView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/vo/ForumVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/vo/HaixianCommentbackVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/vo/NewsVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/CommonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/ConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/ConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/ForumService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/HaixianCommentbackService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/NewsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/CommonServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/ForumServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/HaixianCommentbackServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/NewsServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/css/app.0e416637.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/css/app.fddc3027.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/css/chunk-vendors.a72b0961.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/admin/admin/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/js/app.57ce3b58.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/js/app.57ce3b58.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/js/app.8957f739.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/js/app.8957f739.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/js/chunk-vendors.40773466.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/js/chunk-vendors.40773466.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/js/chunk-vendors.513e0860.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/dist/js/chunk-vendors.513e0860.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/admin/admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/admin/admin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/front/front/modules/http/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/front/modules/http/http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommonDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ConfigDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DictionaryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DictionaryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ForumDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HaixianCommentbackDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NewsDao.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/admin/admin/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/src/assets/css/element-variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/admin/admin/src/assets/css/element-variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/src/utils/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/admin/admin/src/utils/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/config/MyMetaObjectHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/config/MyMetaObjectHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/CommonController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/ConfigController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/DictionaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/DictionaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/ForumController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/HaixianCommentbackController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/HaixianController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/HaixianController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/HaixianOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/HaixianOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/NewsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/YonghuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/YonghuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/CommonDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/ForumDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/HaixianCommentbackDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/NewsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/ConfigEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/ConfigEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/HaixianCommentbackEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/NewsEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/model/ForumModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/model/HaixianCommentbackModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/model/NewsModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/CartView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/view/CartView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/ForumView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/HaixianCommentbackView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/NewsView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/vo/ForumVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/vo/HaixianCommentbackVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/vo/NewsVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/CommonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/ForumService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/HaixianCommentbackService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/NewsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/CommonServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/ForumServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/HaixianCommentbackServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/NewsServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/elementui/fonts/element-icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/elementui/fonts/element-icons.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/elementui/fonts/element-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/elementui/fonts/element-icons.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.eot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/front/front/modules/http/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/modules/http/http.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/modules/tinymce/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/modules/tinymce/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/modules/tinymce/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/modules/tinymce/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/xznstatic/css/fonts/element-icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/xznstatic/css/fonts/element-icons.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/front/front/xznstatic/css/fonts/element-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/xznstatic/css/fonts/element-icons.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommonDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ConfigDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DictionaryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DictionaryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ForumDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HaixianCommentbackDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/NewsDao.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/upload/file.rar" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/file.rar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/upload/haixianMuBan.xls" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/haixianMuBan.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/upload/music.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/music.mp3" afterDir="false" />
@@ -143,7 +166,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/17322/Desktop/springboot219基于SpringBoot的网络海鲜市场系统的设计与实现/wangluohaixianshicang",
+    "last_opened_file_path": "C:/Users/17322/Desktop/新建文件夹 (2)/wangluohaixianshicang",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -155,6 +178,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\17322\Desktop\wangluohaixianshicang\src\main\resources\mapper" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xwenb\fruit\springboot219\wangluohaixianshicang\src\main\resources\front\front" />
     </key>
@@ -199,7 +225,9 @@
       <workItem from="1718782724772" duration="643000" />
       <workItem from="1718783446796" duration="42000" />
       <workItem from="1718783846531" duration="4673000" />
-      <workItem from="1718789103338" duration="1370000" />
+      <workItem from="1718789103338" duration="5370000" />
+      <workItem from="1718799069606" duration="6486000" />
+      <workItem from="1718806562663" duration="303000" />
     </task>
     <task id="LOCAL-00001" summary="项目开始">
       <created>1718730317459</created>
@@ -250,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718767649363</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修改后台">
+      <created>1718790624348</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718790624348</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +319,7 @@
     <MESSAGE value="用户登录和注册" />
     <MESSAGE value="商品模块更新" />
     <MESSAGE value="除杂" />
-    <option name="LAST_COMMIT_MESSAGE" value="除杂" />
+    <MESSAGE value="修改后台" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改后台" />
   </component>
 </project>

@@ -13,7 +13,7 @@
     <artifactId>wangluohaixianshicang</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>wangluohaixianshicang</name>
-    <description>网络海鲜市场系统</description>
+    <description>海鲜市场管理系统</description>
 
     <properties>
         <java.version>1.8</java.version>

@@ -62,8 +62,6 @@ public class HaixianOrderController {
     private YonghuService yonghuService;
 @Autowired
 private CartService cartService;
-@Autowired
-private HaixianCommentbackService haixianCommentbackService;
 
 
 
@@ -591,16 +589,7 @@ private HaixianCommentbackService haixianCommentbackService;
         if(haixianId == null)
             return R.error(511,"查不到该商品");
 
-        HaixianCommentbackEntity haixianCommentbackEntity = new HaixianCommentbackEntity();
-            haixianCommentbackEntity.setId(id);
-            haixianCommentbackEntity.setHaixianId(haixianId);
-            haixianCommentbackEntity.setYonghuId((Integer) request.getSession().getAttribute("userId"));
-            haixianCommentbackEntity.setHaixianCommentbackText(commentbackText);
-            haixianCommentbackEntity.setInsertTime(new Date());
-            haixianCommentbackEntity.setReplyText(null);
-            haixianCommentbackEntity.setUpdateTime(null);
-            haixianCommentbackEntity.setCreateTime(new Date());
-            haixianCommentbackService.insert(haixianCommentbackEntity);
+
 
             haixianOrder.setHaixianOrderTypes(5);//设置订单状态为已评价
             haixianOrderService.updateById(haixianOrder);//根据id更新

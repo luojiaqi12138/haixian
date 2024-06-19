@@ -310,7 +310,7 @@ public class CartController {
 
 
     /**
-    * 前端保存
+    * 添加购物车
     */
     @RequestMapping("/add")
     public R add(@RequestBody CartEntity cart, HttpServletRequest request){
@@ -318,10 +318,10 @@ public class CartController {
         Wrapper<CartEntity> queryWrapper = new EntityWrapper<CartEntity>()
             .eq("yonghu_id", cart.getYonghuId())
             .eq("haixian_id", cart.getHaixianId())
-            .eq("buy_number", cart.getBuyNumber())
-            ;
-        logger.info("sql语句:"+queryWrapper.getSqlSegment());
+            .eq("buy_number", cart.getBuyNumber());
+
         CartEntity cartEntity = cartService.selectOne(queryWrapper);
+
         if(cartEntity==null){
             cart.setCreateTime(new Date());
             cart.setInsertTime(new Date());

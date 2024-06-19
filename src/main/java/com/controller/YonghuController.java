@@ -300,7 +300,9 @@ public class YonghuController {
     @IgnoreAuth
     @RequestMapping(value = "/login")
     public R login(String username, String password, String captcha, HttpServletRequest request) {
+        System.out.println(username+password);
         YonghuEntity yonghu = yonghuService.selectOne(new EntityWrapper<YonghuEntity>().eq("username", username));
+        System.out.println(yonghu);
         if(yonghu==null || !yonghu.getPassword().equals(password))
             return R.error("账号或密码不正确");
         //  // 获取监听器中的字典表
