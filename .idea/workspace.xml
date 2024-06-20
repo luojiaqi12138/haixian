@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeb71fce-7b5b-4024-9ed5-35678ab684a4" name="更改" comment="基本完成">
+    <list default="true" id="eeb71fce-7b5b-4024-9ed5-35678ab684a4" name="更改" comment="简单修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HaixianOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/HaixianOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/YonghuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/YonghuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interceptor/AuthorizationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/interceptor/AuthorizationInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/DictionaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/DictionaryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/UsersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/BaiduUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/MPUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/MPUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DictionaryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DictionaryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/annotation/APPLoginUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/annotation/LoginUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ServletContextListener/DictionaryServletContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ServletContextListener/DictionaryServletContextListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/AddressController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/CartController.class" afterDir="false" />
@@ -172,7 +163,7 @@
       <workItem from="1718783846531" duration="4673000" />
       <workItem from="1718789103338" duration="5370000" />
       <workItem from="1718799069606" duration="6486000" />
-      <workItem from="1718806562663" duration="12274000" />
+      <workItem from="1718806562663" duration="13186000" />
     </task>
     <task id="LOCAL-00001" summary="项目开始">
       <created>1718730317459</created>
@@ -244,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718807970356</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="简单修改">
+      <created>1718844777848</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718844777848</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +278,7 @@
     <MESSAGE value="除杂" />
     <MESSAGE value="修改后台" />
     <MESSAGE value="基本完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="基本完成" />
+    <MESSAGE value="简单修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="简单修改" />
   </component>
 </project>

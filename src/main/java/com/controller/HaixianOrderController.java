@@ -189,85 +189,6 @@ private CartService cartService;
     }
 
 
-    /**
-     * 批量上传
-     */
-    @RequestMapping("/batchInsert")
-    public R save( String fileName, HttpServletRequest request){
-        logger.debug("batchInsert方法:,,Controller:{},,fileName:{}",this.getClass().getName(),fileName);
-        Integer yonghuId = Integer.valueOf(String.valueOf(request.getSession().getAttribute("userId")));
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        try {
-            List<HaixianOrderEntity> haixianOrderList = new ArrayList<>();//上传的东西
-            Map<String, List<String>> seachFields= new HashMap<>();//要查询的字段
-            Date date = new Date();
-            int lastIndexOf = fileName.lastIndexOf(".");
-            if(lastIndexOf == -1){
-                return R.error(511,"该文件没有后缀");
-            }else{
-                String suffix = fileName.substring(lastIndexOf);
-                if(!".xls".equals(suffix)){
-                    return R.error(511,"只支持后缀为xls的excel文件");
-                }else{
-                    URL resource = this.getClass().getClassLoader().getResource("static/upload/" + fileName);//获取文件路径
-                    File file = new File(resource.getFile());
-                    if(!file.exists()){
-                        return R.error(511,"找不到上传文件，请联系管理员");
-                    }else{
-                        List<List<String>> dataList = PoiUtil.poiImport(file.getPath());//读取xls文件
-                        dataList.remove(0);//删除第一行，因为第一行是提示
-                        for(List<String> data:dataList){
-                            //循环
-                            HaixianOrderEntity haixianOrderEntity = new HaixianOrderEntity();
-//                            haixianOrderEntity.setHaixianOrderUuidNumber(data.get(0));                    //订单号 要改的
-//                            haixianOrderEntity.setAddressId(Integer.valueOf(data.get(0)));   //收货地址 要改的
-//                            haixianOrderEntity.setHaixianId(Integer.valueOf(data.get(0)));   //商品 要改的
-//                            haixianOrderEntity.setYonghuId(Integer.valueOf(data.get(0)));   //用户 要改的
-//                            haixianOrderEntity.setBuyNumber(Integer.valueOf(data.get(0)));   //购买数量 要改的
-//                            haixianOrderEntity.setHaixianOrderTruePrice(data.get(0));                    //实付价格 要改的
-//                            haixianOrderEntity.setHaixianOrderTypes(Integer.valueOf(data.get(0)));   //订单类型 要改的
-//                            haixianOrderEntity.setHaixianOrderCourierName(data.get(0));                    //快递公司 要改的
-//                            haixianOrderEntity.setHaixianOrderCourierNumber(data.get(0));                    //快递单号 要改的
-//                            haixianOrderEntity.setHaixianOrderPaymentTypes(Integer.valueOf(data.get(0)));   //支付类型 要改的
-//                            haixianOrderEntity.setInsertTime(date);//时间
-//                            haixianOrderEntity.setCreateTime(date);//时间
-                            haixianOrderList.add(haixianOrderEntity);
-
-
-                            //把要查询是否重复的字段放入map中
-                                //订单号
-                                if(seachFields.containsKey("haixianOrderUuidNumber")){
-                                    List<String> haixianOrderUuidNumber = seachFields.get("haixianOrderUuidNumber");
-                                    haixianOrderUuidNumber.add(data.get(0));//要改的
-                                }else{
-                                    List<String> haixianOrderUuidNumber = new ArrayList<>();
-                                    haixianOrderUuidNumber.add(data.get(0));//要改的
-                                    seachFields.put("haixianOrderUuidNumber",haixianOrderUuidNumber);
-                                }
-                        }
-
-                        //查询是否重复
-                         //订单号
-                        List<HaixianOrderEntity> haixianOrderEntities_haixianOrderUuidNumber = haixianOrderService.selectList(new EntityWrapper<HaixianOrderEntity>().in("haixian_order_uuid_number", seachFields.get("haixianOrderUuidNumber")));
-                        if(haixianOrderEntities_haixianOrderUuidNumber.size() >0 ){
-                            ArrayList<String> repeatFields = new ArrayList<>();
-                            for(HaixianOrderEntity s:haixianOrderEntities_haixianOrderUuidNumber){
-                                repeatFields.add(s.getHaixianOrderUuidNumber());
-                            }
-                            return R.error(511,"数据库的该表中的 [订单号] 字段已经存在 存在数据为:"+repeatFields.toString());
-                        }
-                        haixianOrderService.insertBatch(haixianOrderList);
-                        return R.ok();
-                    }
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-            return R.error(511,"批量插入数据异常，请联系管理员");
-        }
-    }
-
-
 
 
 
@@ -379,6 +300,8 @@ private CartService cartService;
             yonghuService.updateById(yonghuEntity);
             return R.ok();
     }
+
+
     /**
      * 添加订单
      */

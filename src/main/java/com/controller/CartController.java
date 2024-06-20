@@ -158,10 +158,10 @@ public class CartController {
         logger.debug("update方法:,,Controller:{},,cart:{}",this.getClass().getName(),cart.toString());
 
         String role = String.valueOf(request.getSession().getAttribute("role"));
-//        if(false)
-//            return R.error(511,"永远不会进入");
-//        else if("用户".equals(role))
-//            cart.setYonghuId(Integer.valueOf(String.valueOf(request.getSession().getAttribute("userId"))));
+        if(false)
+            return R.error(511,"永远不会进入");
+        else if("用户".equals(role))
+            cart.setYonghuId(Integer.valueOf(String.valueOf(request.getSession().getAttribute("userId"))));
         //根据字段查询是否有相同数据
         Wrapper<CartEntity> queryWrapper = new EntityWrapper<CartEntity>()
             .notIn("id",cart.getId())
@@ -192,61 +192,6 @@ public class CartController {
         logger.debug("delete:,,Controller:{},,ids:{}",this.getClass().getName(),ids.toString());
         cartService.deleteBatchIds(Arrays.asList(ids));
         return R.ok();
-    }
-
-
-    /**
-     * 批量上传
-     */
-    @RequestMapping("/batchInsert")
-    public R save( String fileName, HttpServletRequest request){
-        logger.debug("batchInsert方法:,,Controller:{},,fileName:{}",this.getClass().getName(),fileName);
-        Integer yonghuId = Integer.valueOf(String.valueOf(request.getSession().getAttribute("userId")));
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        try {
-            List<CartEntity> cartList = new ArrayList<>();//上传的东西
-            Map<String, List<String>> seachFields= new HashMap<>();//要查询的字段
-            Date date = new Date();
-            int lastIndexOf = fileName.lastIndexOf(".");
-            if(lastIndexOf == -1){
-                return R.error(511,"该文件没有后缀");
-            }else{
-                String suffix = fileName.substring(lastIndexOf);
-                if(!".xls".equals(suffix)){
-                    return R.error(511,"只支持后缀为xls的excel文件");
-                }else{
-                    URL resource = this.getClass().getClassLoader().getResource("static/upload/" + fileName);//获取文件路径
-                    File file = new File(resource.getFile());
-                    if(!file.exists()){
-                        return R.error(511,"找不到上传文件，请联系管理员");
-                    }else{
-                        List<List<String>> dataList = PoiUtil.poiImport(file.getPath());//读取xls文件
-                        dataList.remove(0);//删除第一行，因为第一行是提示
-                        for(List<String> data:dataList){
-                            //循环
-                            CartEntity cartEntity = new CartEntity();
-//                            cartEntity.setYonghuId(Integer.valueOf(data.get(0)));   //所属用户 要改的
-//                            cartEntity.setHaixianId(Integer.valueOf(data.get(0)));   //商品 要改的
-//                            cartEntity.setBuyNumber(Integer.valueOf(data.get(0)));   //购买数量 要改的
-//                            cartEntity.setCreateTime(date);//时间
-//                            cartEntity.setUpdateTime(sdf.parse(data.get(0)));          //更新时间 要改的
-//                            cartEntity.setInsertTime(date);//时间
-                            cartList.add(cartEntity);
-
-
-                            //把要查询是否重复的字段放入map中
-                        }
-
-                        //查询是否重复
-                        cartService.insertBatch(cartList);
-                        return R.ok();
-                    }
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-            return R.error(511,"批量插入数据异常，请联系管理员");
-        }
     }
 
 
@@ -331,6 +276,7 @@ public class CartController {
             return R.error(511,"表中有相同数据");
         }
     }
+
 
 
 }
