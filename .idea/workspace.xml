@@ -6,66 +6,61 @@
   <component name="ChangeListManager">
     <list default="true" id="eeb71fce-7b5b-4024-9ed5-35678ab684a4" name="更改" comment="基本完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/admin/admin/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/admin/admin/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/config/MyMetaObjectHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/config/MyMetaObjectHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/HaixianOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/HaixianOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/YonghuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/YonghuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/interceptor/AuthorizationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/interceptor/AuthorizationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/DictionaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/DictionaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/UsersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/BaiduUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/MPUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/MPUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DictionaryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DictionaryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ServletContextListener/DictionaryServletContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ServletContextListener/DictionaryServletContextListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/AddressController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/CommonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/ConfigController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/DictionaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/DictionaryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/FileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/ForumController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/HaixianCommentbackController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/HaixianController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/HaixianController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/HaixianOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/HaixianOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/NewsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/UsersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/YonghuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/YonghuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/CommonDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/ForumDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/HaixianCommentbackDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/NewsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/ConfigEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/ConfigEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/HaixianCommentbackEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/NewsEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/model/ForumModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/model/HaixianCommentbackModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/model/NewsModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/AddressEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/AddressEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/CartEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/CartEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/DictionaryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/DictionaryEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/ForumEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/ForumEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/HaixianEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/HaixianEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/HaixianOrderEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/HaixianOrderEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/YonghuEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/YonghuEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/AddressView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/view/AddressView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/CartView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/view/CartView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/ForumView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/HaixianCommentbackView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/NewsView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/vo/ForumVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/vo/HaixianCommentbackVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/vo/NewsVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/CommonService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/ForumService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/HaixianCommentbackService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/NewsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/CommonServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/ForumServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/HaixianCommentbackServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/NewsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/elementui/fonts/element-icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/elementui/fonts/element-icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/elementui/fonts/element-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/elementui/fonts/element-icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/layui/font/iconfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/modules/http/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/modules/http/http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/modules/tinymce/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/modules/tinymce/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/modules/tinymce/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/modules/tinymce/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/xznstatic/css/fonts/element-icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/xznstatic/css/fonts/element-icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/front/xznstatic/css/fonts/element-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/xznstatic/css/fonts/element-icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommonDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ConfigDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/DictionaryView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/view/DictionaryView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/HaixianOrderView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/view/HaixianOrderView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/HaixianView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/view/HaixianView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/view/YonghuView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/entity/view/YonghuView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interceptor/AuthorizationInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/interceptor/AuthorizationInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/DictionaryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/impl/DictionaryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/impl/TokenServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/impl/UsersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/impl/UsersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thread/MyThreadMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thread/MyThreadMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/BaiduUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/CommonUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/CommonUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/FileUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/HttpClientUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/HttpClientUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/MPUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/MPUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/PoiUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/PoiUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/Query.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/SQLFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/SQLFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/ValidatorUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/ValidatorUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/front/front/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/front/css/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/DictionaryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DictionaryDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ForumDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HaixianCommentbackDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/NewsDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/file.rar" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/file.rar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/haixianMuBan.xls" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/haixianMuBan.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/music.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/music.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/video.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/1649314480214.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/1649314480214.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/1649314488385.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/1649314488385.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/1649315294480.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/1649315294480.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/1649315306956.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/1649315306956.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/1649315320439.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload/1649315320439.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +82,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../../apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
         <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="D:\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
@@ -122,7 +117,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "http.proxy",
+    "settings.editor.selected.configurable": "MavenSettings",
     "spring.configuration.checksum": "b267b8d1533c31af27fc49e3358438e5",
     "vue.rearranger.settings.migration": "true"
   }
@@ -177,7 +172,7 @@
       <workItem from="1718783846531" duration="4673000" />
       <workItem from="1718789103338" duration="5370000" />
       <workItem from="1718799069606" duration="6486000" />
-      <workItem from="1718806562663" duration="1344000" />
+      <workItem from="1718806562663" duration="12274000" />
     </task>
     <task id="LOCAL-00001" summary="项目开始">
       <created>1718730317459</created>
@@ -242,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718807234672</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="基本完成">
+      <created>1718807970356</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718807970356</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

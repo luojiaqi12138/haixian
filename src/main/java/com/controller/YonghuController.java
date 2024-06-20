@@ -182,119 +182,6 @@ public class YonghuController {
 
 
     /**
-     * 批量上传
-     */
-    @RequestMapping("/batchInsert")
-    public R save( String fileName, HttpServletRequest request){
-        logger.debug("batchInsert方法:,,Controller:{},,fileName:{}",this.getClass().getName(),fileName);
-        Integer yonghuId = Integer.valueOf(String.valueOf(request.getSession().getAttribute("userId")));
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        try {
-            List<YonghuEntity> yonghuList = new ArrayList<>();//上传的东西
-            Map<String, List<String>> seachFields= new HashMap<>();//要查询的字段
-            Date date = new Date();
-            int lastIndexOf = fileName.lastIndexOf(".");
-            if(lastIndexOf == -1){
-                return R.error(511,"该文件没有后缀");
-            }else{
-                String suffix = fileName.substring(lastIndexOf);
-                if(!".xls".equals(suffix)){
-                    return R.error(511,"只支持后缀为xls的excel文件");
-                }else{
-                    URL resource = this.getClass().getClassLoader().getResource("static/upload/" + fileName);//获取文件路径
-                    File file = new File(resource.getFile());
-                    if(!file.exists()){
-                        return R.error(511,"找不到上传文件，请联系管理员");
-                    }else{
-                        List<List<String>> dataList = PoiUtil.poiImport(file.getPath());//读取xls文件
-                        dataList.remove(0);//删除第一行，因为第一行是提示
-                        for(List<String> data:dataList){
-                            //循环
-                            YonghuEntity yonghuEntity = new YonghuEntity();
-//                            yonghuEntity.setUsername(data.get(0));                    //账户 要改的
-//                            //yonghuEntity.setPassword("123456");//密码
-//                            yonghuEntity.setYonghuName(data.get(0));                    //用户姓名 要改的
-//                            yonghuEntity.setYonghuPhone(data.get(0));                    //用户手机号 要改的
-//                            yonghuEntity.setYonghuIdNumber(data.get(0));                    //用户身份证号 要改的
-//                            yonghuEntity.setYonghuPhoto("");//详情和图片
-//                            yonghuEntity.setSexTypes(Integer.valueOf(data.get(0)));   //性别 要改的
-//                            yonghuEntity.setYonghuEmail(data.get(0));                    //电子邮箱 要改的
-//                            yonghuEntity.setNewMoney(data.get(0));                    //余额 要改的
-//                            yonghuEntity.setCreateTime(date);//时间
-                            yonghuList.add(yonghuEntity);
-
-
-                            //把要查询是否重复的字段放入map中
-                                //账户
-                                if(seachFields.containsKey("username")){
-                                    List<String> username = seachFields.get("username");
-                                    username.add(data.get(0));//要改的
-                                }else{
-                                    List<String> username = new ArrayList<>();
-                                    username.add(data.get(0));//要改的
-                                    seachFields.put("username",username);
-                                }
-                                //用户手机号
-                                if(seachFields.containsKey("yonghuPhone")){
-                                    List<String> yonghuPhone = seachFields.get("yonghuPhone");
-                                    yonghuPhone.add(data.get(0));//要改的
-                                }else{
-                                    List<String> yonghuPhone = new ArrayList<>();
-                                    yonghuPhone.add(data.get(0));//要改的
-                                    seachFields.put("yonghuPhone",yonghuPhone);
-                                }
-                                //用户身份证号
-                                if(seachFields.containsKey("yonghuIdNumber")){
-                                    List<String> yonghuIdNumber = seachFields.get("yonghuIdNumber");
-                                    yonghuIdNumber.add(data.get(0));//要改的
-                                }else{
-                                    List<String> yonghuIdNumber = new ArrayList<>();
-                                    yonghuIdNumber.add(data.get(0));//要改的
-                                    seachFields.put("yonghuIdNumber",yonghuIdNumber);
-                                }
-                        }
-
-                        //查询是否重复
-                         //账户
-                        List<YonghuEntity> yonghuEntities_username = yonghuService.selectList(new EntityWrapper<YonghuEntity>().in("username", seachFields.get("username")));
-                        if(yonghuEntities_username.size() >0 ){
-                            ArrayList<String> repeatFields = new ArrayList<>();
-                            for(YonghuEntity s:yonghuEntities_username){
-                                repeatFields.add(s.getUsername());
-                            }
-                            return R.error(511,"数据库的该表中的 [账户] 字段已经存在 存在数据为:"+repeatFields.toString());
-                        }
-                         //用户手机号
-                        List<YonghuEntity> yonghuEntities_yonghuPhone = yonghuService.selectList(new EntityWrapper<YonghuEntity>().in("yonghu_phone", seachFields.get("yonghuPhone")));
-                        if(yonghuEntities_yonghuPhone.size() >0 ){
-                            ArrayList<String> repeatFields = new ArrayList<>();
-                            for(YonghuEntity s:yonghuEntities_yonghuPhone){
-                                repeatFields.add(s.getYonghuPhone());
-                            }
-                            return R.error(511,"数据库的该表中的 [用户手机号] 字段已经存在 存在数据为:"+repeatFields.toString());
-                        }
-                         //用户身份证号
-                        List<YonghuEntity> yonghuEntities_yonghuIdNumber = yonghuService.selectList(new EntityWrapper<YonghuEntity>().in("yonghu_id_number", seachFields.get("yonghuIdNumber")));
-                        if(yonghuEntities_yonghuIdNumber.size() >0 ){
-                            ArrayList<String> repeatFields = new ArrayList<>();
-                            for(YonghuEntity s:yonghuEntities_yonghuIdNumber){
-                                repeatFields.add(s.getYonghuIdNumber());
-                            }
-                            return R.error(511,"数据库的该表中的 [用户身份证号] 字段已经存在 存在数据为:"+repeatFields.toString());
-                        }
-                        yonghuService.insertBatch(yonghuList);
-                        return R.ok();
-                    }
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-            return R.error(511,"批量插入数据异常，请联系管理员");
-        }
-    }
-
-
-    /**
     * 登录
     */
     @IgnoreAuth
@@ -305,11 +192,7 @@ public class YonghuController {
         System.out.println(yonghu);
         if(yonghu==null || !yonghu.getPassword().equals(password))
             return R.error("账号或密码不正确");
-        //  // 获取监听器中的字典表
-        // ServletContext servletContext = ContextLoader.getCurrentWebApplicationContext().getServletContext();
-        // Map<String, Map<Integer, String>> dictionaryMap= (Map<String, Map<Integer, String>>) servletContext.getAttribute("dictionaryMap");
-        // Map<Integer, String> role_types = dictionaryMap.get("role_types");
-        // role_types.get(.getRoleTypes());
+
         String token = tokenService.generateToken(yonghu.getId(),username, "yonghu", "用户");
         R r = R.ok();
         r.put("token", token);
@@ -388,8 +271,6 @@ public class YonghuController {
             YonghuView view = new YonghuView();
             BeanUtils.copyProperties( yonghu , view );//把实体数据重构到view中
 
-            //修改对应字典表字段
-            dictionaryService.dictionaryConvert(view, request);
             return R.ok().put("data", view);
         }else {
             return R.error(511,"查不到数据");
@@ -430,16 +311,12 @@ public class YonghuController {
         return R.ok().put("data", page);
     }
 
-    /**
-    * 前端详情
-    */
+  //用户详细信息
     @RequestMapping("/detail/{id}")
     public R detail(@PathVariable("id") Long id, HttpServletRequest request){
         logger.debug("detail方法:,,Controller:{},,id:{}",this.getClass().getName(),id);
         YonghuEntity yonghu = yonghuService.selectById(id);
             if(yonghu !=null){
-
-
                 //entity转view
                 YonghuView view = new YonghuView();
                 BeanUtils.copyProperties( yonghu , view );//把实体数据重构到view中
@@ -454,7 +331,7 @@ public class YonghuController {
 
 
     /**
-    * 前端保存
+    *添加用户
     */
     @RequestMapping("/add")
     public R add(@RequestBody YonghuEntity yonghu, HttpServletRequest request){
@@ -469,6 +346,7 @@ public class YonghuController {
         logger.info("sql语句:"+queryWrapper.getSqlSegment());
         YonghuEntity yonghuEntity = yonghuService.selectOne(queryWrapper);
         if(yonghuEntity==null){
+            //创建时间跟默认密码
             yonghu.setCreateTime(new Date());
         yonghu.setPassword("123456");
         yonghuService.insert(yonghu);

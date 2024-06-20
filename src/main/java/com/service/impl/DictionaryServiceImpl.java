@@ -39,6 +39,7 @@ public class DictionaryServiceImpl extends ServiceImpl<DictionaryDao, Dictionary
      * 赋值给字典表
      * @param obj view对象
      */
+    //查找对象中以“Types”结尾的字段，然后通过这些字段的值在字典映射表中查找相应的字符串值，并将该字符串值赋给对象中对应的以“Value”结尾的字段。
     public void dictionaryConvert(Object obj, HttpServletRequest request) {
         try {
             if (obj == null) return;
@@ -57,7 +58,6 @@ public class DictionaryServiceImpl extends ServiceImpl<DictionaryDao, Dictionary
             }
 
             // 获取监听器中的字典表
-//            ServletContext servletContext = ContextLoader.getCurrentWebApplicationContext().getServletContext();
             ServletContext servletContext = request.getServletContext();
             Map<String, Map<Integer, String>> dictionaryMap= (Map<String, Map<Integer, String>>) servletContext.getAttribute("dictionaryMap");
 

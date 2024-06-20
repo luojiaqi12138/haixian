@@ -453,10 +453,7 @@ private CartService cartService;
                     //计算所获得积分
                     Double buyJifen =0.0;
                     yonghuEntity.setNewMoney(yonghuEntity.getNewMoney() - money); //设置金额
-
-
                     haixianOrderEntity.setHaixianOrderTruePrice(money);
-
                 }
             }
             haixianOrderList.add(haixianOrderEntity);
@@ -516,7 +513,6 @@ private CartService cartService;
             haixianEntity.setHaixianKucunNumber(haixianEntity.getHaixianKucunNumber() + buyNumber);
 
 
-
             haixianOrder.setHaixianOrderTypes(2);//设置订单状态为退款
             haixianOrderService.updateById(haixianOrder);//根据id更新
             yonghuService.updateById(yonghuEntity);//更新用户信息
@@ -545,17 +541,6 @@ private CartService cartService;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     /**
      * 收货
      */
@@ -571,37 +556,6 @@ private CartService cartService;
         }
         return R.ok();
     }
-
-
-
-    /**
-    * 评价
-    */
-    @RequestMapping("/commentback")
-    public R commentback(Integer id, String commentbackText, Integer haixianCommentbackPingfenNumber, HttpServletRequest request){
-        logger.debug("commentback方法:,,Controller:{},,id:{}",this.getClass().getName(),id);
-            HaixianOrderEntity haixianOrder = haixianOrderService.selectById(id);
-        if(haixianOrder == null)
-            return R.error(511,"查不到该订单");
-        if(haixianOrder.getHaixianOrderTypes() != 4)
-            return R.error(511,"您不能评价");
-        Integer haixianId = haixianOrder.getHaixianId();
-        if(haixianId == null)
-            return R.error(511,"查不到该商品");
-
-
-
-            haixianOrder.setHaixianOrderTypes(5);//设置订单状态为已评价
-            haixianOrderService.updateById(haixianOrder);//根据id更新
-            return R.ok();
-    }
-
-
-
-
-
-
-
 
 
 

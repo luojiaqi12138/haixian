@@ -15,6 +15,7 @@
     </sql>
 
 
+<!-- 根据条件筛选字典-->
     <select id="selectListView" parameterType="map" resultType="com.entity.view.DictionaryView" >
         SELECT
         <include refid="Base_Column_List" />

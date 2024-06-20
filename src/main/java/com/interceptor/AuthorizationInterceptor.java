@@ -36,6 +36,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
 
+        //访问静态资源和字典直接放行
         String servletPath = request.getServletPath();
         if("/dictionary/page".equals(request.getServletPath())  || "/file/upload".equals(request.getServletPath()) || "/yonghu/register".equals(request.getServletPath()) ){//请求路径是字典表或者文件上传 直接放行
             return true;
@@ -47,6 +48,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
         response.setHeader("Access-Control-Allow-Headers", "x-requested-with,request-source,Token, Origin,imgType, Content-Type, cache-control,postman-token,Cookie, Accept,authorization");
         response.setHeader("Access-Control-Allow-Origin", request.getHeader("Origin"));
 
+        //如果控制器方法被自定义注解给标记，就直接放行
         IgnoreAuth annotation;
         if (handler instanceof HandlerMethod) {
             annotation = ((HandlerMethod) handler).getMethodAnnotation(IgnoreAuth.class);
@@ -63,7 +65,8 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
         if(annotation!=null) {
         	return true;
         }
-        
+
+
         TokenEntity tokenEntity = null;
         if(StringUtils.isNotBlank(token)) {
         	tokenEntity = tokenService.getTokenEntity(token);
@@ -80,6 +83,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 		PrintWriter writer = null;
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json; charset=utf-8");
+        //最后没放行要求其进行登录
 		try {
 		    writer = response.getWriter();
 		    writer.print(JSONObject.toJSONString(R.error(401, "请先登录")));

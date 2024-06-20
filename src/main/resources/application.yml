@@ -41,8 +41,11 @@ mybatis-plus:
     #自定义SQL注入器
     sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
   configuration:
+    #启用下划线转驼峰命名法
     map-underscore-to-camel-case: true
+    #禁用缓存
     cache-enabled: false
+    #处理空值的 setter 方法调用
     call-setters-on-nulls: true
     #springboot 项目mybatis plus 设置 jdbcTypeForNull (oracle数据库需配置JdbcType.NULL, 默认是Other)
     jdbc-type-for-null: 'null'

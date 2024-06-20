@@ -19,30 +19,35 @@ public class MPUtil {
 
 	
 	//mybatis plus allEQ 表达式转换
+	//将bean转换为Map，并将Map中的key从驼峰命名法转换为下划线命名法,并加上前缀pre。
 		public static Map allEQMapPre(Object bean,String pre) {
 		   Map<String, Object> map =BeanUtil.beanToMap(bean);
 		  return camelToUnderlineMap(map,pre);
 	   }
 
 		//mybatis plus allEQ 表达式转换
+		//将bean转换为Map，并将Map中的key从驼峰命名法转换为下划线命名法
 		public static Map allEQMap(Object bean) {
 		   Map<String, Object> map =BeanUtil.beanToMap(bean);
 		   return camelToUnderlineMap(map,"");
 	   }
 
+		//将bean转换为Map，key转换为下划线命名法并加前缀，然后生成like条件
 		public static Wrapper allLikePre(Wrapper wrapper,Object bean,String pre) {
 			   Map<String, Object> map =BeanUtil.beanToMap(bean);
 			   Map result = camelToUnderlineMap(map,pre);
 			 
 			return genLike(wrapper,result);
 		}
-	
+
+	//将bean转换为Map，生成like条件。
 		public static Wrapper allLike(Wrapper wrapper,Object bean) {
 			  Map result = BeanUtil.beanToMap(bean, true, true);			 
 			return genLike(wrapper,result);
 		}
-	
-	
+
+
+	//遍历Map，将每个key-value对生成like条件，并将其添加到wrapper中。
 		public static Wrapper genLike( Wrapper wrapper,Map param) {
 			Iterator<Map.Entry<String, Object>> it = param.entrySet().iterator();
 			int i=0;
@@ -56,12 +61,14 @@ public class MPUtil {
 			}
 			return wrapper;
 		}
-		
+
+	//将bean转换为Map，生成like或eq条件。
 		public static Wrapper likeOrEq(Wrapper wrapper,Object bean) {
 			  Map result = BeanUtil.beanToMap(bean, true, true);			 
 			return genLikeOrEq(wrapper,result);
 		}
-		
+
+	//genLikeOrEq：遍历Map，如果值包含%，生成like条件，否则生成eq条件。
 		public static Wrapper genLikeOrEq( Wrapper wrapper,Map param) {
 			Iterator<Map.Entry<String, Object>> it = param.entrySet().iterator();
 			int i=0;
@@ -78,13 +85,14 @@ public class MPUtil {
 			}
 			return wrapper;
 		}
-		
+
+		//allEq：将bean转换为Map，生成eq条件。
 		public static Wrapper allEq(Wrapper wrapper,Object bean) {
 			  Map result = BeanUtil.beanToMap(bean, true, true);			 
 			return genEq(wrapper,result);
 		}
 	
-	
+			//genEq：遍历Map，为每个key-value对生成eq条件。
 		public static Wrapper genEq( Wrapper wrapper,Map param) {
 			Iterator<Map.Entry<String, Object>> it = param.entrySet().iterator();
 			int i=0;
@@ -97,8 +105,8 @@ public class MPUtil {
 			}
 			return wrapper;
 		}
-	
-	
+
+	//处理区间查询条件。如果key以_start结尾，生成ge条件；如果key以_end结尾，生成le条件。
 		public static Wrapper between(Wrapper wrapper,Map<String, Object> params) {
 			for(String key : params.keySet()) {
 				String columnName = "";
@@ -117,7 +125,8 @@ public class MPUtil {
 			}
 			return wrapper;
 		}
-	
+
+	//处理排序条件，根据params中的order和sort字段设置排序顺序。
 		public static Wrapper sort(Wrapper wrapper,Map<String, Object> params) {
 			String order = "";
 			if(params.get("order") != null && StringUtils.isNotBlank(params.get("order").toString())) {

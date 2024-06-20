@@ -35,8 +35,6 @@ import com.alibaba.fastjson.*;
 /**
  * 收货地址
  * 后端接口
- * @author
- * @email
 */
 @RestController
 @Controller
@@ -60,21 +58,24 @@ public class AddressController {
 
 
     /**
-    * 后端列表
+    * 分页查询地址
     */
     @RequestMapping("/page")
     public R page(@RequestParam Map<String, Object> params, HttpServletRequest request){
         logger.debug("page方法:,,Controller:{},,params:{}",this.getClass().getName(),JSONObject.toJSONString(params));
+        //
         String role = String.valueOf(request.getSession().getAttribute("role"));
+        //获取用户
         if(false)
             return R.error(511,"永不会进入");
         else if("用户".equals(role))
             params.put("yonghuId",request.getSession().getAttribute("userId"));
+        //如果没有排序方式就默认id排序
         if(params.get("orderBy")==null || params.get("orderBy")==""){
             params.put("orderBy","id");
         }
-        PageUtils page = addressService.queryPage(params);
 
+        PageUtils page = addressService.queryPage(params);
         //字典表数据转换
         List<AddressView> list =(List<AddressView>)page.getList();
         for(AddressView c:list){
@@ -85,7 +86,7 @@ public class AddressController {
     }
 
     /**
-    * 后端详情
+    根据id查询地址
     */
     @RequestMapping("/info/{id}")
     public R info(@PathVariable("id") Long id, HttpServletRequest request){
@@ -108,11 +109,11 @@ public class AddressController {
         }else {
             return R.error(511,"查不到数据");
         }
-
     }
 
     /**
-    * 后端保存
+    * 保存地址信息，用于保存新的地址信息。该方法会根据传入的地址信息进行查询，
+     * 检查是否存在相同的地址记录。如果不存在相同记录，则保存新的地址信息，并根据特定条件更新其他地址记录
     */
     @RequestMapping("/save")
     public R save(@RequestBody AddressEntity address, HttpServletRequest request){
@@ -134,11 +135,13 @@ public class AddressController {
 
         logger.info("sql语句:"+queryWrapper.getSqlSegment());
         AddressEntity addressEntity = addressService.selectOne(queryWrapper);
+        //判断是否存在相同地址，如果不存在相同收获地址
         if(addressEntity==null){
             address.setInsertTime(new Date());
             address.setCreateTime(new Date());
             Integer isdefaultTypes = address.getIsdefaultTypes();
-            if(isdefaultTypes == 2 ){//如果当前的是默认地址，把当前用户的其他改为不是默认地址
+            if(isdefaultTypes == 2 ){
+                //如果当前的是默认地址，把当前用户的其他改为不是默认地址
                 List<AddressEntity> addressEntitys = addressService.selectList(new EntityWrapper<AddressEntity>().eq("isdefault_types",2));
                 if(addressEntitys != null && addressEntitys.size()>0){
                     for(AddressEntity a:addressEntitys)
@@ -149,6 +152,7 @@ public class AddressController {
             addressService.insert(address);
             return R.ok();
         }else {
+            //存在相同地址
             return R.error(511,"表中有相同数据");
         }
     }
@@ -161,11 +165,13 @@ public class AddressController {
         logger.debug("update方法:,,Controller:{},,address:{}",this.getClass().getName(),address.toString());
 
         String role = String.valueOf(request.getSession().getAttribute("role"));
-//        if(false)
-//            return R.error(511,"永远不会进入");
-//        else if("用户".equals(role))
-//            address.setYonghuId(Integer.valueOf(String.valueOf(request.getSession().getAttribute("userId"))));
+        if(false)
+            return R.error(511,"永远不会进入");
+        else if("用户".equals(role))
+
+            address.setYonghuId(Integer.valueOf(String.valueOf(request.getSession().getAttribute("userId"))));
         //根据字段查询是否有相同数据
+
         Wrapper<AddressEntity> queryWrapper = new EntityWrapper<AddressEntity>()
             .notIn("id",address.getId())
             .andNew()
@@ -199,7 +205,7 @@ public class AddressController {
 
 
     /**
-    * 删除
+    * 根据id数组删除收获地址
     */
     @RequestMapping("/delete")
     public R delete(@RequestBody Integer[] ids){
@@ -207,84 +213,6 @@ public class AddressController {
         addressService.deleteBatchIds(Arrays.asList(ids));
         return R.ok();
     }
-
-
-    /**
-     * 批量上传
-     */
-    @RequestMapping("/batchInsert")
-    public R save( String fileName, HttpServletRequest request){
-        logger.debug("batchInsert方法:,,Controller:{},,fileName:{}",this.getClass().getName(),fileName);
-        Integer yonghuId = Integer.valueOf(String.valueOf(request.getSession().getAttribute("userId")));
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        try {
-            List<AddressEntity> addressList = new ArrayList<>();//上传的东西
-            Map<String, List<String>> seachFields= new HashMap<>();//要查询的字段
-            Date date = new Date();
-            int lastIndexOf = fileName.lastIndexOf(".");
-            if(lastIndexOf == -1){
-                return R.error(511,"该文件没有后缀");
-            }else{
-                String suffix = fileName.substring(lastIndexOf);
-                if(!".xls".equals(suffix)){
-                    return R.error(511,"只支持后缀为xls的excel文件");
-                }else{
-                    URL resource = this.getClass().getClassLoader().getResource("static/upload/" + fileName);//获取文件路径
-                    File file = new File(resource.getFile());
-                    if(!file.exists()){
-                        return R.error(511,"找不到上传文件，请联系管理员");
-                    }else{
-                        List<List<String>> dataList = PoiUtil.poiImport(file.getPath());//读取xls文件
-                        dataList.remove(0);//删除第一行，因为第一行是提示
-                        for(List<String> data:dataList){
-                            //循环
-                            AddressEntity addressEntity = new AddressEntity();
-//                            addressEntity.setYonghuId(Integer.valueOf(data.get(0)));   //创建用户 要改的
-//                            addressEntity.setAddressName(data.get(0));                    //收货人 要改的
-//                            addressEntity.setAddressPhone(data.get(0));                    //电话 要改的
-//                            addressEntity.setAddressDizhi(data.get(0));                    //地址 要改的
-//                            addressEntity.setIsdefaultTypes(Integer.valueOf(data.get(0)));   //是否默认地址 要改的
-//                            addressEntity.setInsertTime(date);//时间
-//                            addressEntity.setUpdateTime(sdf.parse(data.get(0)));          //修改时间 要改的
-//                            addressEntity.setCreateTime(date);//时间
-                            addressList.add(addressEntity);
-
-
-                            //把要查询是否重复的字段放入map中
-                                //电话
-                                if(seachFields.containsKey("addressPhone")){
-                                    List<String> addressPhone = seachFields.get("addressPhone");
-                                    addressPhone.add(data.get(0));//要改的
-                                }else{
-                                    List<String> addressPhone = new ArrayList<>();
-                                    addressPhone.add(data.get(0));//要改的
-                                    seachFields.put("addressPhone",addressPhone);
-                                }
-                        }
-
-                        //查询是否重复
-                         //电话
-                        List<AddressEntity> addressEntities_addressPhone = addressService.selectList(new EntityWrapper<AddressEntity>().in("address_phone", seachFields.get("addressPhone")));
-                        if(addressEntities_addressPhone.size() >0 ){
-                            ArrayList<String> repeatFields = new ArrayList<>();
-                            for(AddressEntity s:addressEntities_addressPhone){
-                                repeatFields.add(s.getAddressPhone());
-                            }
-                            return R.error(511,"数据库的该表中的 [电话] 字段已经存在 存在数据为:"+repeatFields.toString());
-                        }
-                        addressService.insertBatch(addressList);
-                        return R.ok();
-                    }
-                }
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-            return R.error(511,"批量插入数据异常，请联系管理员");
-        }
-    }
-
-
-
 
 
     /**

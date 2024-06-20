@@ -39,6 +39,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersDao, UsersEntity> impleme
 		return baseMapper.selectListView(wrapper);
 	}
 
+	//分页查询
 	@Override
 	public PageUtils queryPage(Map<String, Object> params,
 			Wrapper<UsersEntity> wrapper) {

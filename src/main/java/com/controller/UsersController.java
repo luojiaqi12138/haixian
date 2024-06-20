@@ -48,11 +48,14 @@ public class UsersController {
 		if(user==null || !user.getPassword().equals(password)) {
 			return R.error("账号或密码不正确");
 		}
+		//生成token
 		String token = tokenService.generateToken(user.getId(),username, "users", user.getRole());
 		R r = R.ok();
+		//分配token
 		r.put("token", token);
 		r.put("role",user.getRole());
 		r.put("userId",user.getId());
+		//返回用户信息
 		return r;
 	}
 	
@@ -62,7 +65,6 @@ public class UsersController {
 	@IgnoreAuth
 	@PostMapping(value = "/register")
 	public R register(@RequestBody UsersEntity user){
-//    	ValidatorUtils.validateEntity(user);
     	if(usersService.selectOne(new EntityWrapper<UsersEntity>().eq("username", user.getUsername())) !=null) {
     		return R.error("用户已存在");
     	}
